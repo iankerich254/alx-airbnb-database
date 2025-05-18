@@ -23,5 +23,7 @@ SELECT
 FROM Booking
 JOIN "User" ON Booking.user_id = "User".user_id
 JOIN Property ON Booking.property_id = Property.property_id
-JOIN Payment ON Booking.booking_id = Payment.booking_id;
+JOIN Payment ON Booking.booking_id = Payment.booking_id
+WHERE Booking.start_date >= '2024-01-01'
+  AND Payment.status = 'completed';
 
