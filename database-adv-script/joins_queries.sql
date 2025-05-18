@@ -11,7 +11,7 @@ SELECT
 FROM Booking
 INNER JOIN User ON Booking.user_id = User.user_id;
 
-SELECT
+SELECT 
     Property.property_id,
     Property.name,
     Property.description,
@@ -20,7 +20,8 @@ SELECT
     Review.comment,
     Review.created_at
 FROM Property
-LEFT JOIN Review ON Property.property_id = Review.property_id;
+LEFT JOIN Review ON Property.property_id = Review.property_id
+ORDER BY Property.property_id;
 
 SELECT
     User.user_id,
